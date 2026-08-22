@@ -141,6 +141,50 @@ Ciascun nodo (`solar`, `grid`, `battery`, `home`, `devices`) accetta:
 
 ---
 
+## ✨ Effetti Visivi Wow Factor (`effects`)
+
+Tutti gli effetti visivi sono opzionali e disattivati di default:
+
+```yaml
+effects:
+  meteor_trail:
+    enabled: true          # Coda a cometa luminescente per le particelle
+    tail_length: 0.08      # Lunghezza normalizzata (0.02 - 0.25)
+    glow_intensity: 1.5    # Intensità bagliore (0.5 - 3.0)
+  living_icons:
+    enabled: true          # Icone vive e livello batteria dinamico
+    battery_type: liquid   # 'liquid' (onda liquida animata) o 'gradient'
+    battery_animated: true # Animazione onde continua
+    load_animation: rotate # 'rotate', 'pulse' o 'none'
+  glassmorphism:
+    enabled: true          # Riflesso vetro 3D e neon ring
+    intensity: 50          # Intensità riflesso (0 - 100%)
+    neon_core: true        # Anello concentrico interno Neon
+  impact_ripples:
+    enabled: true          # Onde d'urto all'arrivo delle particelle nei nodi
+    ripple_size: 18        # Dimensione espansione onda in px
+    ripple_color: ""       # Colore personalizzato (lascia vuoto per colore del flusso)
+```
+
+---
+
+## 🎨 Personalizzazione Stile (`styles`)
+
+```yaml
+styles:
+  node_radius_primary: 36        # Raggio nodi principali (px)
+  node_radius_secondary: 28      # Raggio dispositivi (px)
+  node_border_width: 2.5         # Spessore bordo cerchi (px)
+  icon_size_primary: 18          # Dimensione icone principali (px)
+  icon_size_secondary: 16        # Dimensione icone dispositivi (px)
+  line_routing_mode: bezier_curved # 'bezier_curved' o 'orthogonal_bus'
+  bus_lane_spacing: 8            # Spaziatura corsie bus parallele (px)
+  bus_corner_radius: 20          # Raggio curve a 90° bus (px)
+  show_home_mix_ring: true       # Anello multi-colore quote su nodo Casa
+```
+
+---
+
 ## 💻 Sviluppo Locale & Test
 
 ```bash
