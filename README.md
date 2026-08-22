@@ -232,6 +232,9 @@ styles:
   line_routing_mode: string     # default: 'bezier_curved' - 'bezier_curved' o 'orthogonal_bus'
   bus_lane_spacing: number      # default: 8 - Spaziatura corsie bus (px)
   bus_corner_radius: number     # default: 20 - Raggio curve 90° bus (px)
+  invert_bus_lane_order: bool   # default: false - Inverte corsie bus (nodo lontano su corsia interna)
+  particle_inner_glow: boolean  # default: true - Bagliore bianco brillante al centro particella
+  particle_soft_edge: boolean   # default: true - Bordo sfumato radiale (false = bordo netto solido)
   node_radius_primary: number   # default: 36 - Raggio nodi principali (px)
   node_radius_secondary: number # default: 28 - Raggio carichi secondari (px)
   node_border_width: number     # default: 2.5 - Spessore bordo nodi (px)
