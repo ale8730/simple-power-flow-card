@@ -191,7 +191,11 @@ Ciascun nodo (`solar`, `grid`, `battery`, `home`, `devices`) supporta:
 - `invert`: `boolean` (inverte il segno per entità singola)
 - `name`: `string` (etichetta personalizzata)
 - `icon`: `string` (icona MDI personalizzata)
-- `color`: `string` (colore CSS personalizzato o HEX)
+- `color`: `string` (colore base/principale CSS personalizzato o HEX)
+- `color_charge`: `string` (colore personalizzato durante la carica batteria, default `#4caf50`)
+- `color_discharge`: `string` (colore personalizzato durante la scarica batteria, default `#9c27b0`)
+- `use_idle_color`: `boolean` (attiva colore dedicato per batteria a 0 W / inattiva, default `false`)
+- `color_idle`: `string` (colore personalizzato batteria inattiva / idle, default `#94a3b8`)
 - `include_in_home`: `boolean` (solo per `devices`: se `true` include il consumo nel totale Casa, default `true`)
 
 ---
