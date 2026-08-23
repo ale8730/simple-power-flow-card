@@ -254,6 +254,13 @@ styles:
   label_border_width: number    # default: 1 - Spessore bordo chip (px)
   label_color_mode: string      # default: 'auto_contrast' - 'auto_contrast', 'white', 'black', 'match_entity', 'secondary', 'custom'
   label_color: string           # default: '' - Colore testo personalizzato (quando label_color_mode è 'custom')
+  badge_enabled: boolean        # default: false - Attiva badge notifica/stato switch sui nodi
+  badge_style: string           # default: 'dot' - 'dot', 'icon' (mdi:power) o 'text' ('ON'/'OFF')
+  badge_position: string        # default: 'top_right' - 'top_right', 'top_left', 'bottom_right', 'bottom_left'
+  badge_size: number            # default: 10 - Dimensione del badge in px
+  badge_color_on: string        # default: '#4caf50' - Colore badge per stato acceso
+  badge_color_off: string       # default: '#64748b' - Colore badge per stato spento
+  badge_pulse: boolean          # default: true - Pulsazione energetica del badge quando attivo
   node_radius_primary: number   # default: 36 - Raggio nodi principali (px)
   node_radius_secondary: number # default: 28 - Raggio carichi secondari (px)
   node_border_width: number     # default: 2.5 - Spessore bordo nodi (px)
@@ -266,6 +273,28 @@ styles:
   node_shadow_offset_y: number  # default: 4 - Offset verticale ombra (px)
   show_home_mix_ring: boolean   # default: true - Mostra anello quote su nodo Casa
   home_glow_mode: string        # default: 'predominant' - 'predominant' o 'custom'
+```
+
+---
+
+### Esempio Dispositivo con Controllo Switch & Gesture Actions
+
+```yaml
+devices:
+  - name: "Pompa di Calore"
+    entity: sensor.heat_pump_power       # Sensore Watt
+    switch_entity: switch.heat_pump      # Entità switch da pilotare
+    icon: mdi:heat-pump
+    color: "#e91e63"
+    badge_enabled: true
+    badge_style: icon                    # Mostra mini icona mdi:power sul perimetro
+    badge_position: top_right
+    tap_action:
+      action: more-info                  # Tocco singolo: apre pop-up storico
+    hold_action:
+      action: toggle                     # Pressione lunga: accende / spegne la presa
+    double_tap_action:
+      action: toggle
 ```
 
 ---
