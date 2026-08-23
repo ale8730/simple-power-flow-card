@@ -248,9 +248,12 @@ styles:
   spacing_label_below_node: num # default: 14 - Distanza dal cerchio del nodo all'etichetta (px)
   label_chip_enabled: boolean   # default: false - Attiva sfondo stile chip / tag / badge
   label_chip_opacity: number    # default: 0.18 - Opacità sfondo chip calcolato su colore entità (0.05 - 1.0)
+  label_chip_padding_x: number  # default: 8 - Padding orizzontale del chip (px)
+  label_chip_padding_y: number  # default: 3.5 - Padding verticale del chip (px)
   label_border_radius: number   # default: 6 - Raggio arrotondamento bordi chip (px)
   label_border_width: number    # default: 1 - Spessore bordo chip (px)
-  label_color_mode: string      # default: 'match_entity' - 'match_entity' (colore entità) o 'secondary'
+  label_color_mode: string      # default: 'auto_contrast' - 'auto_contrast', 'white', 'black', 'match_entity', 'secondary', 'custom'
+  label_color: string           # default: '' - Colore testo personalizzato (quando label_color_mode è 'custom')
   node_radius_primary: number   # default: 36 - Raggio nodi principali (px)
   node_radius_secondary: number # default: 28 - Raggio carichi secondari (px)
   node_border_width: number     # default: 2.5 - Spessore bordo nodi (px)
