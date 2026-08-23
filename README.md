@@ -196,6 +196,14 @@ Ciascun nodo (`solar`, `grid`, `battery`, `home`, `devices`) supporta:
 - `color_discharge`: `string` (colore personalizzato durante la scarica batteria, default `#9c27b0`)
 - `use_idle_color`: `boolean` (attiva colore dedicato per batteria a 0 W / inattiva, default `false`)
 - `color_idle`: `string` (colore personalizzato batteria inattiva / idle, default `#94a3b8`)
+- `show_label`: `boolean` (mostra/nasconde il nome per questa singola entità, default `true`)
+- `label_font_size`: `number` (dimensione font etichetta personalizzata per questa entità)
+- `label_spacing_below_node`: `number` (distanza dal cerchio in px per questa entità)
+- `label_chip_enabled`: `boolean` (attiva/disattiva sfondo chip badge per questa entità)
+- `label_chip_opacity`: `number` (opacità sfondo chip per questa entità)
+- `label_border_radius`: `number` (raggio arrotondamento bordi per questa entità)
+- `label_border_width`: `number` (spessore bordino chip per questa entità)
+- `label_color_mode`: `'match_entity' | 'secondary'` (modalità colore testo per questa entità)
 - `include_in_home`: `boolean` (solo per `devices`: se `true` include il consumo nel totale Casa, default `true`)
 
 ---
@@ -235,6 +243,14 @@ styles:
   invert_bus_lane_order: bool   # default: false - Inverte corsie bus (nodo lontano su corsia interna)
   particle_inner_glow: boolean  # default: true - Bagliore bianco brillante al centro particella
   particle_soft_edge: boolean   # default: true - Bordo sfumato radiale (false = bordo netto solido)
+  show_labels: boolean          # default: true - Mostra/nasconde globalmente le etichette dei nodi
+  font_size_label: number       # default: 10 - Dimensione font etichette dei nodi (px)
+  spacing_label_below_node: num # default: 14 - Distanza dal cerchio del nodo all'etichetta (px)
+  label_chip_enabled: boolean   # default: false - Attiva sfondo stile chip / tag / badge
+  label_chip_opacity: number    # default: 0.18 - Opacità sfondo chip calcolato su colore entità (0.05 - 1.0)
+  label_border_radius: number   # default: 6 - Raggio arrotondamento bordi chip (px)
+  label_border_width: number    # default: 1 - Spessore bordo chip (px)
+  label_color_mode: string      # default: 'match_entity' - 'match_entity' (colore entità) o 'secondary'
   node_radius_primary: number   # default: 36 - Raggio nodi principali (px)
   node_radius_secondary: number # default: 28 - Raggio carichi secondari (px)
   node_border_width: number     # default: 2.5 - Spessore bordo nodi (px)
